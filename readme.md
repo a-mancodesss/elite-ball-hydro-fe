@@ -1,5 +1,8 @@
 # PS4 Hydropower Compliance Platform
 
+<img width="1635" height="936" alt="image" src="https://github.com/user-attachments/assets/3451d1af-17d5-4788-a2b8-3d7a4c88db0a" />
+
+
 A web platform that digitizes IFC Performance Standard 4 (Community Health & Safety) compliance monitoring for Nepal's hydropower sector.
 
 > **Problem:** 175 hydropower projects in Nepal. Zero centralized digital monitoring. All reports on paper. IFC/ADB financing is blocked because compliance cannot be verified.
