@@ -117,7 +117,7 @@ export default function ProjectDetailView() {
                     {formatDate(latestReport.report_period_end)}
                   </span>
                 </div>
-                <span className="badge bg-slate-100 text-slate-700">
+                <span className="badge bg-slate-500/10 text-slate-700 border-slate-500/20">
                   Submitted {formatDate(latestReport.submitted_at)}
                 </span>
               </div>
@@ -190,12 +190,12 @@ function SummaryCell({
   suffix?: string;
 }) {
   return (
-    <div className="rounded-md border border-slate-200 p-2">
+    <div className="rounded-xl border border-white/60 bg-white/40 backdrop-blur-sm p-3 shadow-sm hover:bg-white/50 transition-colors">
       <div className={`text-xl font-bold ${color}`}>
         {value}
         {suffix}
       </div>
-      <div className="text-xs text-slate-500">{label}</div>
+      <div className="text-xs text-slate-600 font-medium uppercase tracking-wide mt-1">{label}</div>
     </div>
   );
 }

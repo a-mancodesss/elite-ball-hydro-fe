@@ -25,7 +25,7 @@ export default function GapReport({ plan }: Props) {
 
   return (
     <div className="card overflow-hidden">
-      <div className="p-5 border-b border-slate-200 flex items-start justify-between gap-4">
+      <div className="p-5 border-b border-white/40 bg-white/30 backdrop-blur-sm flex items-start justify-between gap-4">
         <div>
           <h3 className="font-semibold text-slate-900">
             Emergency Plan Gap Report
@@ -139,7 +139,7 @@ function ChecklistRow({
   extra?: string | null;
 }) {
   return (
-    <div className="flex items-center gap-3 rounded-md border border-slate-200 px-3 py-2">
+    <div className="flex items-center gap-3 rounded-xl border border-white/60 bg-white/40 backdrop-blur-sm px-4 py-3 shadow-sm hover:bg-white/50 transition-colors">
       <span
         className={`w-7 h-7 rounded-full grid place-items-center text-white text-sm font-bold ${
           present ? "bg-green-500" : "bg-red-500"

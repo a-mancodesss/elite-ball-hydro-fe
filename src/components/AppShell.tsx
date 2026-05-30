@@ -6,8 +6,8 @@ export default function AppShell() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-30">
+    <div className="min-h-screen flex flex-col bg-transparent">
+      <header className="bg-white/60 backdrop-blur-xl border-b border-white/40 sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-md bg-brand-500 grid place-items-center text-white font-bold">
@@ -80,8 +80,8 @@ export default function AppShell() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-xs text-slate-500 flex justify-between">
+      <footer className="border-t border-white/40 bg-white/40 backdrop-blur-md mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 text-xs text-slate-500 flex justify-between">
           <div>IFC PS4 Compliance Platform · v0.1</div>
           <div>DOED · ICIMOD · HydroSHEDS data</div>
         </div>

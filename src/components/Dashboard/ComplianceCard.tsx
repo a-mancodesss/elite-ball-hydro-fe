@@ -113,7 +113,7 @@ function MetricBlock({
   secondary: string;
 }) {
   return (
-    <div className="rounded-md border border-slate-200 p-3">
+    <div className="rounded-xl border border-white/60 bg-white/40 backdrop-blur-sm p-3 hover:bg-white/50 transition-colors shadow-sm">
       <div className="flex items-center justify-between mb-1">
         <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
           {title}

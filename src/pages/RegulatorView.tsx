@@ -141,33 +141,33 @@ export default function RegulatorView() {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <StatCard
           label="Compliant"
           value={stats.COMPLIANT}
-          color="bg-green-50 text-green-700 border-green-200"
+          color="bg-green-500/5 text-green-700 border-green-500/20"
         />
         <StatCard
           label="Partial"
           value={stats.PARTIAL}
-          color="bg-yellow-50 text-yellow-700 border-yellow-200"
+          color="bg-yellow-500/5 text-yellow-700 border-yellow-500/20"
         />
         <StatCard
           label="Violation"
           value={stats.VIOLATION}
-          color="bg-red-50 text-red-700 border-red-200"
+          color="bg-red-500/5 text-red-700 border-red-500/20"
         />
         <StatCard
           label="Not Submitted"
           value={stats.NOT_SUBMITTED}
-          color="bg-slate-100 text-slate-700 border-slate-200"
+          color="bg-slate-500/5 text-slate-700 border-slate-500/20"
         />
       </div>
 
       <ProjectMap summaries={summaries} lakes={lakes} />
 
-      <div className="card">
-        <div className="p-4 border-b border-slate-200 flex flex-wrap items-center gap-3">
+      <div className="card overflow-hidden">
+        <div className="p-5 border-b border-white/40 flex flex-wrap items-center gap-3 bg-white/30 backdrop-blur-sm">
           <div>
             <h2 className="font-semibold text-slate-900">All Projects</h2>
             <p className="text-xs text-slate-500">
@@ -210,9 +210,9 @@ export default function RegulatorView() {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="table-container">
           <table className="w-full text-sm">
-            <thead className="bg-slate-50 text-slate-600 text-xs uppercase tracking-wide">
+            <thead className="bg-slate-50/50 text-slate-600 text-xs uppercase tracking-wide border-b border-white/60">
               <tr>
                 <Th>Project</Th>
                 <Th>River / District</Th>
@@ -232,7 +232,7 @@ export default function RegulatorView() {
                 return (
                   <tr
                     key={s.project.id}
-                    className="border-t border-slate-100 hover:bg-slate-50"
+                    className="border-t border-white/40 hover:bg-white/50 transition-colors"
                   >
                     <td className="px-4 py-3 font-medium text-slate-900">
                       {s.project.name}
@@ -307,11 +307,11 @@ function StatCard({
   color: string;
 }) {
   return (
-    <div className={`border rounded-lg p-4 ${color}`}>
-      <div className="text-xs uppercase tracking-wide font-semibold">
+    <div className={`card p-5 ${color} backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}>
+      <div className="text-xs uppercase tracking-wider font-semibold opacity-80">
         {label}
       </div>
-      <div className="text-3xl font-bold mt-1">{value}</div>
+      <div className="text-3xl font-bold mt-2">{value}</div>
     </div>
   );
 }

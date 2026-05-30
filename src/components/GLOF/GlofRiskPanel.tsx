@@ -76,7 +76,7 @@ export default function GlofRiskPanel({ risk }: Props) {
             {risk.all_lakes_in_system.map((l) => (
               <li
                 key={l.id}
-                className="flex items-center justify-between text-sm border border-slate-200 rounded px-3 py-1.5"
+                className="flex items-center justify-between text-sm border border-white/60 bg-white/30 backdrop-blur-sm rounded-lg px-4 py-2"
               >
                 <span className="font-medium">{l.name}</span>
                 <span className="text-slate-500">
@@ -101,7 +101,7 @@ function Stat({
   sub?: string;
 }) {
   return (
-    <div className="rounded-md border border-slate-200 p-3">
+    <div className="rounded-xl border border-white/60 bg-white/40 backdrop-blur-sm p-4 hover:bg-white/50 transition-colors shadow-sm">
       <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
         {label}
       </div>
